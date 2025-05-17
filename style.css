@@ -1,0 +1,322 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px; /* Reduced vertical padding */
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333; /* Optional: subtle bottom border */
+}
+
+header .logo img {
+    height: 40px; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem; 
+    padding: 6px 8px; 
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4343;
+}
+
+
+/* Main Section */
+#main .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+}
+
+/* Left Side Text */
+#main .left {
+    flex: 1;
+    min-width: 300px;
+}
+
+#main .left h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#main .left p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#main .left button {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Right Side Image */
+#main .right {
+    flex: 1;
+    min-width: 300px;
+    text-align: right;
+}
+
+#main .right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* About Section */
+#about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Services Section */
+#services {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #222;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.service {
+    margin-bottom: 30px;
+}
+
+.service h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1.2rem;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #222;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.project {
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 500px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgb(255, 0, 76);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #111;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #222;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-list li:hover {
+    background-color: #333;
+}
+
+.contact-list img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.contact-list a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: #ff4343;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #main .container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px; /* Extra space since header stacks now */
+    }
+
+    #main .right,
+    #main .left {
+        text-align: center;
+    }
+
+    #main .left h1 {
+        font-size: 2rem;
+    }
+
+    #main .left p {
+        font-size: 1rem;
+    }
+
+    #about h2,
+    #services h2,
+    #projects h2,
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    .service h3,
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .service p,
+    .project p,
+    #about p {
+        font-size: 1rem;
+    }
+
+    .contact-list li {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .contact-list a {
+        font-size: 1rem;
+    }
+}
